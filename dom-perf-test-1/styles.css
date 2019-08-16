@@ -1,0 +1,98 @@
+/* BASE */
+
+/* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700'); */
+
+/* VARIABLES */
+/* :root {
+    --red: #ff6f69;
+    --mydarkgray: #333;
+} */
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+    font-size: 100%;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-weight: 400; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* MEDIA CATCH ALL */
+img, embed, object, video {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem;
+}
+
+p   {
+    margin: 0.5rem;
+}
+
+body {
+  margin: 0 10%;
+  background-color:Gainsboro;
+
+}
+
+/* TEXT BASE */
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.placeholder {
+  display: flex;
+  flex-wrap: wrap;
+}
+.test-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.paragraph {
+  flex: 1;
+  border: 0.1rem solid wheat;
+  background-color: Teal;
+  margin: 0.2rem;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  color: wheat;
+}
+
+.test-btn, .reset-btn {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  background-color: #2e4e4e;
+  color: whitesmoke;
+  border: 2px solid #536e15;
+  border-radius: 0.4rem;
+  box-shadow: 3px 3px 1px 1px #000000c7;
+  transition: all 0.5s;
+}
+
+.test-btn:hover, .reset-btn:hover {
+  box-shadow: 1px 1px 1px 1px #000000c7;
+}
+
+.display-perf {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

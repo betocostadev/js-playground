@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>DOM Performance Tests</title>
+</head>
+<body>
+  <main>
+    <h1>DOM Performance Tests</h1>
+    <h2>Element insertion</h2>
+    <p>The test below is going to add 3000 styled paragraphs in a flex container. There are different methods to achieve the same thing, each will case a different browser reflow.</p>
+    <p>Performance tests using <code>performance.now()</code></p>
+    <div class="buttons">
+      <button class="test-btn">Test 1</button>
+      <button class="test-btn">Test 2</button>
+      <button class="test-btn">Test 3</button>
+      <button class="reset-btn">Reset</button>
+    </div>
+    <p class="display-perf">Test 1: </p>
+    <p class="display-perf">Test 2: </p>
+    <p class="display-perf">Test 3: </p>
+
+    <section class="test-container">
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
