@@ -59,10 +59,10 @@ const chessBoard = (grid) => {
   }
 };
 
-chessBoard(5);
+chessBoard(4);
 
 console.log(`
-=== FizzBuzz ===
+====== FizzBuzz ======
 `);
 
 const fizzBuzz = (maxNumber) => {

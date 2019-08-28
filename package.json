@@ -1,21 +1,25 @@
 {
   "name": "js-playground",
   "version": "1.0.0",
-  "description": "Some basic JavaScript tests",
+  "description": "JavaScript Playground, tests, challenges, etc",
   "main": "array-sum.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-utils": "^1.4.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betocostadev/js-playground.git"
   },
-  "dependencies": {
-    "eslint": "^6.2.2"
-  }
+  "author": "Beto Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/betocostadev/js-playground/issues"
+  },
+  "homepage": "https://github.com/betocostadev/js-playground#readme"
 }
