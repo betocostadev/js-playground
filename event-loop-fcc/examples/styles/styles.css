@@ -1,0 +1,25 @@
+:root {
+  --colReact: #61dafb;
+  --coldarkgray: #333;
+}
+
+html {
+  box-sizing: border-box;
+  /* font-size: 62.5%; */
+  font-family: 'Open Sans', sans-serif;
+  /* font-weight: 400; */
+}
+
+*,
+*:before,
+*:after {
+box-sizing: inherit;
+}
+
+body {
+  background: var(--coldarkgray);
+}
+
+.container__example-eventlistener {
+  background: lightblue;
+}

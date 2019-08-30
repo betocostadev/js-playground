@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Examples</title>
+</head>
+<body>
+  <script src="./js/scripts.js" async></script>
+
+  <section class="container__example-eventlistener">
+    <button id="example-event1">Click Me!</button>
+    <p>By clicking on the button above, its event listener will listen for the <code>click</code> event and handle the <code>changeButtonText()</code> function.</p>
+    <h3>CODE</h3>
+    <pre>
+      <code>// Gets the button element
+          const btnExampleEvent1 = document.querySelector('#example-event1');
+
+          // The change function
+          const changeButtonText = () => {
+            btnExampleEvent1.textContent = 'Event handled, you clicked me!'
+          }
+
+          // Adding the event listener to the button and telling it what to do when the event is triggered.
+          btnExampleEvent1.addEventListener('click', changeButtonText)</code>
+    </pre>
+  </section>
+</body>
+</html>
