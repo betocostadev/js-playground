@@ -4,7 +4,8 @@
 
 // Eloquent JavaScript Chapter 2 - Exercises
 
-console.log(`Chapter 02 Exercises`);
+console.log(`=== Chapter 02 Exercises ===
+`);
 /*
 Looping a triangle
 Write a loop that makes seven calls to console.log to output the following triangle:
@@ -24,7 +25,7 @@ const createTriangle = (lines) => {
     triAnglePart += '#';
   }
 };
-console.log(`Looping a triangle`);
+console.log(`====== Looping a triangle ======`);
 createTriangle(8);
 
 /* Chessboard
@@ -46,27 +47,33 @@ When you have a program that generates this pattern, define a binding size = 8 a
 change the program so that it works for any size, outputting a grid of the given width and height.
 */
 console.log(`
-=== Chessboard ===
+====== Chessboard ======
 `);
 
 const chessBoard = (grid) => {
-  for (let i = 0; i < grid; i++) {
-    if (i % 2 === 0) {
-      console.log(' # # # #\n');
-    } else if (i % 2 !== 0) {
-      console.log('# # # # \n');
+  let even = ''
+  let odd = '';
+  for (let i = 0; i < grid / 2; i++) {
+    even += '# '
+    odd += ' #'
+  }
+  for (let j = 0; j < grid / 2; j++) {
+    if (j % 2 === 0) {
+      console.log(even)
+    } else if (j % 2 !== 0) {
+      console.log(odd)
     }
   }
-};
+}
 
-chessBoard(4);
+chessBoard(8);
 
 console.log(`
 ====== FizzBuzz ======
 `);
 
 const fizzBuzz = (maxNumber) => {
-  for (let i = 1; i < maxNumber; i++) {
+  for (let i = 1; i <= maxNumber; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
       console.log('FizzBuzz');
     } else if (i % 5 === 0) {
@@ -79,4 +86,4 @@ const fizzBuzz = (maxNumber) => {
   }
 };
 
-fizzBuzz(64);
+fizzBuzz(30);
