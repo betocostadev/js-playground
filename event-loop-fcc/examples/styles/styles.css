@@ -20,6 +20,11 @@ body {
   background: var(--coldarkgray);
 }
 
+/* MEDIA CATCH ALL */
+img, embed, object, video {
+  max-width: 100%;
+}
+
 .container__example-eventlistener {
   background: lightblue;
 }
@@ -65,4 +70,10 @@ body {
   border: solid 2px white;
   background: #082944;
   transition: all 1s ease-in-out;
+}
+
+.image-array {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
