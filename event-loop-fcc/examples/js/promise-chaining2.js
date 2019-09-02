@@ -4,68 +4,41 @@ const promiseParagraphsContainer = document.querySelector('.container__promise-p
 const par1Content = 'Paragraph 1 added!';
 const par2Content = 'Paragraph 2 added!';
 const par3Content = 'Paragraph 3 added!';
-
-// This is our promise function. As long as there is an image URL when the function is called
-// the function will add the image to the page.
-const insertParagraph1 = (content) => {
+// Our promise function. It creates and element with the content provided when calling the function.
+const addParagraphs = (content) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (content) {
-        const par1 = document.createElement("p");
-        par1.textContent = content;
-        promiseParagraphsContainer.appendChild(par1)
-        resolve(par1Content);
+        let promisePar = document.createElement("p");
+        promisePar.textContent = content;
+        // promiseParagraphsContainer.appendChild(promisePar)
+        resolve(promisePar);
       } else {
-        reject('No content provided for paragraph 1');
+        let errorMessage = 'No content provided for paragraph';
+        reject(new Error(errorMessage));
       }
     }, 750);
   })
 }
 
-const insertParagraph2 = (content) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (content) {
-        const par2 = document.createElement("p");
-        par2.textContent = content;
-        promiseParagraphsContainer.appendChild(par2)
-        resolve('Paragraph 2 added');
-      } else {
-        reject('No content provided for paragraph 2');
-      }
-    }, 750);
-  })
+// Will add the paragraph to the page, it will use the element generated from the promise above
+const insertParagraphs = (par) => {
+  promiseParagraphsContainer.appendChild(par)
 }
 
-const insertParagraph3 = (content) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (content) {
-        const par3 = document.createElement("p");
-        par3.textContent = content;
-        promiseParagraphsContainer.appendChild(par3)
-        resolve('Paragraph 3 added');
-      } else {
-        reject('No content provided for paragraph 3');
-      }
-    }, 750);
-  })
-}
-
-
-
-
-// the function below will call for our promises
-const addParagraphs = () => {
+// Here we will return all the promises after they have been resolved.
+const promiseParagraph = () => {
   return Promise.all([
-    insertParagraph1(par1Content),
-    insertParagraph2(par2Content),
-    insertParagraph3(par3Content)
+    addParagraphs(par1Content),
+    addParagraphs(par2Content),
+    addParagraphs(par3Content),
   ])
-  .catch((error) => {
-    console.log(error);
+  .then((parArr) => {
+    parArr.forEach( par => insertParagraphs(par))
   })
-};
-
+  .catch((error) => {
+    console.log(error)
+  })
+}
 // Using the button to call for the promises
-btnExamplePromise2.addEventListener('click', addParagraphs);
+btnExamplePromise2.addEventListener('click', promiseParagraph);
