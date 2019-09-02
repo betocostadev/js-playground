@@ -1,5 +1,5 @@
 const btnExamplePromise1 = document.querySelector('#example-promise1');
-const imageArrayContainer = document.querySelector('.image-array');
+const imageArrayContainer1 = document.querySelector('.image-array1');
 
 // This is our promise function. As long as there is an image URL when the function is called
 // the function will add the image to the page.
@@ -9,7 +9,7 @@ const insertImage = (source) => {
       if (source) {
         const imgEl = document.createElement("img");
         imgEl.src = source;
-        imageArrayContainer.appendChild(imgEl)
+        imageArrayContainer1.appendChild(imgEl)
         resolve(source);  // We are returning the source, this value will be used in our chaining.
       } else {
         reject(console.log('Image URL not provided!'));

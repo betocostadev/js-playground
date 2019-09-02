@@ -1,3 +1,4 @@
+// The stock of our online store.
 const onlineStore = {
   shirt: {
     qty: 10,
@@ -9,6 +10,9 @@ const onlineStore = {
   }
 }
 
+// purchaseItems function will receive the order and check if:
+// 1 - The items are available and within the asked quantity
+// 2 - return the order and the total price of the items
 const purchaseItems = (order) => {
   return new Promise ((resolve, reject) => {
     setTimeout(() => {
@@ -28,6 +32,7 @@ const purchaseItems = (order) => {
   });
 };
 
+// Check balance will get the order and the total price and check the funds
 const checkBalance = ((stockResponse) => {
   const order = stockResponse[0];
   const total = stockResponse[1];
@@ -43,6 +48,7 @@ const checkBalance = ((stockResponse) => {
   });
 });
 
+// Transaction Done runs after the other two functions has already run and resolved.
 const transactionDone = ((balanceDone) => {
   const order = balanceDone[0].items;
   const total = balanceDone[1]
@@ -51,15 +57,21 @@ const transactionDone = ((balanceDone) => {
   Total price: ${total} `)
 });
 
+// Transaction failed will only occur if there is a problem
 const transactionFailed = (error) => {
   console.log(error);
 }
 
+// Our order and account balance.
 const order = {
   items: [['shirt', 1], ['pants', 2]],
   accountBalance: 12.89
 };
 
+// Here, we call the purchaseItems function providing our order
+// The stock is checked
+// then the balance is checked
+// If there is an error, we catch it at the end.
 purchaseItems(order)
 .then((stockChecked) => {
   return checkBalance(stockChecked)

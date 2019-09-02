@@ -72,7 +72,17 @@ img, embed, object, video {
   transition: all 1s ease-in-out;
 }
 
-.image-array {
+.image-array1 {
+  width: 90vw;
+  min-height: 10vw;
+  background: #006400;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.container__promise-paragraphs {
+  color: white;
   width: 90vw;
   min-height: 10vw;
   background: #006400;
