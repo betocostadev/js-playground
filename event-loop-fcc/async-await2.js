@@ -1,4 +1,4 @@
-const math = async (a, b) => {
+const mathAsync = async (a, b) => {
   const sum = new Promise((resolve, reject) => {
     setTimeout(() => { resolve(a + b) }, 1000);
   });
@@ -13,7 +13,7 @@ const math = async (a, b) => {
 
   return output
 }
-math(5, 20)
+mathAsync(5, 20)
 // Output
 // The result of sum is: 25.
 // The result of mult is: 100.
