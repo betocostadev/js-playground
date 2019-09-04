@@ -15,7 +15,7 @@ const addParagraphs = (content) => {
         resolve(promisePar);
       } else {
         let errorMessage = 'No content provided for paragraph';
-        reject(new Error(errorMessage));
+        reject(Error(errorMessage));
       }
     }, 750);
   })

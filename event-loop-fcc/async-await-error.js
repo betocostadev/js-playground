@@ -1,0 +1,27 @@
+const mathAsync = async (a, b) => {
+  const sum = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      a && b ?
+      resolve(a + b)
+      : reject(Error('No numbers provided!'))
+    }, 1000);
+  });
+  const mult = new Promise((resolve, reject) => {
+    setTimeout(() => { resolve(a * b) }, 1000);
+  });
+
+  try {
+    const sumResult = await sum;
+    const multResult = await mult;
+    const output = console.log(
+    `  The result of sum is: ${await sumResult}.
+    The result of mult is: ${await multResult}.`);
+    return output
+  } catch (error) {
+    return console.log(error);
+  }
+}
+mathAsync()
+// Output
+// The result of sum is: 25.
+// The result of mult is: 100.
