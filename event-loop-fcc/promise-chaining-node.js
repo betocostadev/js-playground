@@ -1,11 +1,11 @@
 // The stock of our online store.
 const onlineStore = {
   shirt: {
-    qty: 10,
+    qty: 1,
     price: 8.99
   },
   pants: {
-    qty: 12,
+    qty: 1,
     price: 14.99
   }
 }
@@ -26,7 +26,7 @@ const purchaseItems = (order) => {
         console.log(`Items in stock. Total price is ${total}.`);
         resolve([order, total]);
       } else {
-        reject(`Not all of the items are in stock.`);
+        reject(Error(`Not all of the items are in stock.`));
       }
     }, 1000);
   });
@@ -42,7 +42,7 @@ const checkBalance = ((stockResponse) => {
         console.log(`Order = ${order.items}. Total = ${total}`);
         resolve([order, total]);
       } else {
-        reject('Not enough funds.')
+        reject(Error('Not enough funds.'))
       }
     }, 1000);
   });

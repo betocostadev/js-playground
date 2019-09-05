@@ -4,18 +4,17 @@ const generateDelay = () => Math.floor(Math.random() * 2000);
 
 // Our failure callback that will be executed by the catch statement
 failureCallback = (error) => {
-  const failureMessage = `Sorry, got an error: ${error}`
-  throw new Error(failureMessage);
+  const failureMessage = `Sorry, got an error! ${error}`
+  return console.log(failureMessage);
 }
 
 const addDiscount = (preDiscount) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (preDiscount >= 15) {
-        resolve(preDiscount - 5.00);
-      } else {
-        reject(`Cannot add discount if bill is less than 15.00`)
-      }
+      // If the bill is less than 15. We will reject the promise and throw an error.
+      preDiscount >=15
+      ? resolve(preDiscount - 5.00)
+      : reject(Error(`Cannot add a discount if the bill is less than 15.00`));
     }, generateDelay());
   });
 }
@@ -47,4 +46,4 @@ const payBill = async (bill) => {
   }
 }
 
-payBill(13.90) // Error: Sorry, got an error: Cannot add discount if bill is less than 15.00
+payBill(13.90) // Sorry, got an error! Error: Cannot add a discount if the bill is less than 15.00
