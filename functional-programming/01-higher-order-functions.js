@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-
 */
 
 console.log(`=== Functional Programming in JavaScript ===`)
-console.log(`Part 1 - Higher Order Functions`)
+console.log(`Part 1 - Higher Order Functions: Filter`)
 
 // Functions are values, and since they are values, we can pass them to another functions.
 // That means we can COMPOSE our code. Compose small functions into bigger functions.
@@ -43,7 +43,7 @@ console.log(sayNameAndSpecies(animals, 'dragon'));
 
 // Reject
 console.log(`
-We can also try the opposite, another Higher-Order Function
+We can also try the opposite, another Higher-Order Function using Filter
 `)
 
 const isSpecimen = (specimen) => animals.filter(animal => animal.species === specimen)
@@ -54,3 +54,10 @@ const otherSpecies = (specimen) => animals.filter(animal => animal.species !== s
 const noDogs = otherSpecies('dog')
 
 console.log(`No dogs:`, noDogs)
+
+console.log(`
+Array.find(): Similar to filter, but returns only the first result:
+`)
+
+const meg = animals.find(animal => animal.species === 'dog')
+console.log(meg)
