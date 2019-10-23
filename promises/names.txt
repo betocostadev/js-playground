@@ -1,0 +1,10 @@
+Character: Luke Skywalker
+Character: C-3PO
+Character: R2-D2
+Character: Darth Vader
+Character: Leia Organa
+Character: Owen Lars
+Character: Beru Whitesun lars
+Character: R5-D4
+Character: Biggs Darklighter
+Character: Obi-Wan Kenobi

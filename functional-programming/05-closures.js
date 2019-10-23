@@ -1,5 +1,5 @@
 /* Function Programming
-04 - Closures
+05 - Closures
 Recommended by the Full Stack Open 2019
 MPJ | Fun Fun Function Video:
 https://www.youtube.com/watch?v=CQqwU2Ixu-U

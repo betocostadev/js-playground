@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "JavaScript Playground, tests, challenges, etc",
   "main": "array-sum.js",
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
   "devDependencies": {
     "eslint": "^6.2.2",
     "eslint-config-airbnb-base": "^14.0.0",

@@ -1,5 +1,5 @@
 /* Function Programming
-05 - Currying
+06 - Currying
 Recommended by the Full Stack Open 2019
 MPJ | Fun Fun Function Video:
 https://www.youtube.com/watch?v=iZLP4qOwY8I

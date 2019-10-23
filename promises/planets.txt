@@ -1,0 +1,10 @@
+Planet: Alderaan | Diameter: 12500
+Planet: Yavin IV | Diameter: 10200
+Planet: Hoth | Diameter: 7200
+Planet: Dagobah | Diameter: 8900
+Planet: Bespin | Diameter: 118000
+Planet: Endor | Diameter: 4900
+Planet: Naboo | Diameter: 12120
+Planet: Coruscant | Diameter: 12240
+Planet: Kamino | Diameter: 19720
+Planet: Geonosis | Diameter: 11370
