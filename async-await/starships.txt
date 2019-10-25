@@ -1,0 +1,23 @@
+Starship:
+  Name: Executor | Model: Executor-class star dreadnought | Manufacturer: Kuat Drive Yards
+ Fondor Shipyards
+Starship:
+  Name: Sentinel-class landing craft | Model: Sentinel-class landing craft | Manufacturer: Sienar Fleet Systems
+ Cyngus Spaceworks
+Starship:
+  Name: Death Star | Model: DS-1 Orbital Battle Station | Manufacturer: Imperial Department of Military Research
+ Sienar Fleet Systems
+Starship:
+  Name: Millennium Falcon | Model: YT-1300 light freighter | Manufacturer: Corellian Engineering Corporation
+Starship:
+  Name: Y-wing | Model: BTL Y-wing | Manufacturer: Koensayr Manufacturing
+Starship:
+  Name: X-wing | Model: T-65 X-wing | Manufacturer: Incom Corporation
+Starship:
+  Name: TIE Advanced x1 | Model: Twin Ion Engine Advanced x1 | Manufacturer: Sienar Fleet Systems
+Starship:
+  Name: Slave 1 | Model: Firespray-31-class patrol and attack | Manufacturer: Kuat Systems Engineering
+Starship:
+  Name: Imperial shuttle | Model: Lambda-class T-4a shuttle | Manufacturer: Sienar Fleet Systems
+Starship:
+  Name: EF76 Nebulon-B escort frigate | Model: EF76 Nebulon-B escort frigate | Manufacturer: Kuat Drive Yards
