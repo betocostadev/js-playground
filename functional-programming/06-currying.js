@@ -66,3 +66,33 @@ const findDragons =
 
 console.log(findDragons(dragons)('water'))
 
+const doMath =
+  num1 =>
+   operation =>
+    num2 => {
+      let result;
+      switch (operation) {
+        case '+':
+          result = num1 + num2
+          break;
+        case '-':
+          result = num1 - num2
+          break;
+        case '/':
+          result = num1 / num2
+          break;
+        case '*':
+          result = num1 * num2
+          break;
+        default:
+          break;
+      }
+      return `${num1} ${operation} ${num2} = ${result}`
+    }
+console.log(`
+Math operations in a curried function
+`)
+console.log(doMath(973)('+')(42))
+console.log(doMath(100)('-')(25))
+console.log(doMath(100)('/')(25))
+console.log(doMath(100)('*')(350))
