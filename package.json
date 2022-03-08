@@ -1,8 +1,8 @@
 {
   "name": "js-playground",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "JavaScript Playground, tests, challenges, etc",
-  "main": "array-sum.js",
+  "main": "index.js",
   "dependencies": {
     "node-fetch": "^3.1.1"
   },
