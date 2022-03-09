@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-// SETS
+// Data Structure: SETS
 // The set data structure is like an array, but there are no duplicate items,
 // and the values are not in any particular order
 // Typical use: Check for the presence of an item

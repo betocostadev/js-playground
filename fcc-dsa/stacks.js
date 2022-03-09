@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+// Data Structure: STACKS
+
 console.log('Stacks')
 console.log(
   // eslint-disable-next-line comma-dangle
