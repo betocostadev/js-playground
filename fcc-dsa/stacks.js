@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 console.log('Stacks')
 console.log(
+  // eslint-disable-next-line comma-dangle
   'A DS Stack is somewhat like a Stack of Books. Stacks are a first in, first out type of service.'
 )
 
