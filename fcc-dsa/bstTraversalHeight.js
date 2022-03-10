@@ -1,17 +1,15 @@
+/* eslint-disable no-inner-declarations */
 /* eslint-disable no-else-return */
-/* eslint-disable func-names */
-/* eslint-disable no-param-reassign */
-/* eslint-disable max-classes-per-file */
 /* eslint-disable no-console */
+/* eslint-disable max-classes-per-file */
 
-// Data Structure: BINARY SEARCH TREE
+// Data Structure: BINARY SEARCH TREE - Traversal & Height
 
 // A tree data structure is a kind of structure that
 // when visualized, it looks like a tree.
 // Think in something like the DOM tree, connected by its Nodes.
 
-console.log('======= BINARY SEARCH TREE =======\n')
-
+console.log('======= BINARY SEARCH TREE: TRAVERSAL & HEIGHT =======\n')
 class Node {
   constructor(data, left = null, right = null) {
     this.data = data
@@ -20,9 +18,6 @@ class Node {
   }
 }
 
-// Binary search trees only have two nodes (left and right in this case)
-// They are ordered
-// Each subtree is less than or equal to the parent node
 class BST {
   constructor() {
     this.root = null
@@ -138,26 +133,124 @@ class BST {
     }
     this.root = removeNode(this.root, data)
   }
+
+  isBalanced() {
+    return this.findMinHeight() >= this.findMaxHeight() - 1
+  }
+
+  findMinHeight(node = this.root) {
+    if (node == null) {
+      return -1
+    }
+    const left = this.findMinHeight(node.left)
+    const right = this.findMinHeight(node.right)
+    if (left < right) {
+      return left + 1
+    } else {
+      return right + 1
+    }
+  }
+
+  findMaxHeight(node = this.root) {
+    if (node == null) {
+      return -1
+    }
+    const left = this.findMaxHeight(node.left)
+    const right = this.findMaxHeight(node.right)
+    if (left > right) {
+      return left + 1
+    } else {
+      return right + 1
+    }
+  }
+
+  inOrder() {
+    if (this.root == null) {
+      return null
+    }
+
+    const result = []
+    function traverseInOrder(node) {
+      node.left && traverseInOrder(node.left)
+      result.push(node.data)
+      node.right && traverseInOrder(node.right)
+    }
+    traverseInOrder(this.root)
+    return result
+  }
+
+  preOrder() {
+    if (this.root == null) {
+      return null
+    }
+
+    const result = []
+    function traversePreOrder(node) {
+      result.push(node.data)
+      node.left && traversePreOrder(node.left)
+      node.right && traversePreOrder(node.right)
+    }
+    traversePreOrder(this.root)
+    return result
+  }
+
+  postOrder() {
+    if (this.root == null) {
+      return null
+    }
+    const traversePostOrder = function traversePostOrder(node) {
+      node.left && traversePostOrder(node.left)
+      node.right && traversePostOrder(node.right)
+      result.push(node.data)
+    }
+    const result = []
+    traversePostOrder(this.root)
+    return result
+  }
+
+  levelOrder() {
+    const result = []
+    const Q = []
+    if (this.root != null) {
+      Q.push(this.root)
+      while (Q.length > 0) {
+        const node = Q.shift()
+        result.push(node.data)
+        if (node.left != null) {
+          Q.push(node.left)
+        }
+        if (node.right != null) {
+          Q.push(node.right)
+        }
+      }
+      return result
+    } else {
+      return null
+    }
+  }
 }
 
-const binSTree = new BST()
-binSTree.add(50)
-binSTree.add(17)
-binSTree.add(72)
-binSTree.add(54)
-binSTree.add(76)
-binSTree.add(67)
-binSTree.add(23)
-binSTree.add(40)
-binSTree.add(12)
-binSTree.add(30)
-binSTree.add(32)
-binSTree.add(10)
-console.log(binSTree)
-console.log('max is: ', binSTree.findMax())
-console.log('min is: ', binSTree.findMin())
-console.log('where is the 12? ', binSTree.find(12))
-console.log('where is the 83? ', binSTree.find(83))
-console.log('67 is present? ', binSTree.isPresent(67))
-console.log('Lets remove the 67', binSTree.remove(67))
-console.log('67 is present? ', binSTree.isPresent(67))
+const bst = new BST()
+
+bst.add(9)
+bst.add(4)
+bst.add(17)
+bst.add(3)
+bst.add(6)
+bst.add(22)
+bst.add(5)
+bst.add(7)
+bst.add(20)
+
+console.log(bst.findMinHeight())
+console.log(bst.findMaxHeight())
+console.log(bst.isBalanced())
+bst.add(10)
+console.log(bst.findMinHeight())
+console.log(bst.findMaxHeight())
+console.log(bst.isBalanced())
+console.log('inOrder: ', bst.inOrder())
+console.log('preOrder: ', bst.preOrder())
+console.log('postOrder: ', bst.postOrder())
+
+console.log('levelOrder: ', bst.levelOrder())
