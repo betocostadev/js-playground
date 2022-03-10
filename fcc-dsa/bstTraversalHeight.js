@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-inner-declarations */
 /* eslint-disable no-else-return */
 /* eslint-disable no-console */
