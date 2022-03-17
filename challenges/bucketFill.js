@@ -36,30 +36,35 @@
  * The function accepts STRING_ARRAY picture as parameter.
  */
 
-function check(picture, row, col, cells) {
-  const el = picture[row][col]
-  if (picture[row][col] === el) {
+function mapStrokes(picture, row, col, cells) {
+  const cell = picture[row][col]
+
+  if (picture[row][col] === cell) {
     cells[row][col] = true
     // Traverse in all directions
     // down
-    if (row + 1 < picture.length && picture[row + 1][col] === el && cells[row + 1][col] === false) {
-      check(picture, row + 1, col, cells)
+    if (
+      row + 1 < picture.length &&
+      picture[row + 1][col] === cell &&
+      cells[row + 1][col] === false
+    ) {
+      mapStrokes(picture, row + 1, col, cells)
     }
     // left
     if (
       col + 1 < picture[row].length &&
-      picture[row][col + 1] === el &&
+      picture[row][col + 1] === cell &&
       cells[row][col + 1] === false
     ) {
-      check(picture, row, col + 1, cells)
+      mapStrokes(picture, row, col + 1, cells)
     }
     // up
-    if (row > 0 && picture[row - 1][col] === el && cells[row - 1][col] === false) {
-      check(picture, row - 1, col, cells)
+    if (row > 0 && picture[row - 1][col] === cell && cells[row - 1][col] === false) {
+      mapStrokes(picture, row - 1, col, cells)
     }
     // right
-    if (col > 0 && picture[row][col - 1] === el && cells[row][col - 1] === false) {
-      check(picture, row, col - 1, cells)
+    if (col > 0 && picture[row][col - 1] === cell && cells[row][col - 1] === false) {
+      mapStrokes(picture, row, col - 1, cells)
     }
   }
 }
@@ -68,9 +73,10 @@ function strokesRequired(picture) {
   const cells = []
 
   // Use a loop with an inner loop to traverse rows and columns
-  // Add a false bool to use as empty cells
+  // Create an inner array for each position
   for (let col = 0; col < picture.length; col++) {
     cells[col] = []
+    // Add a false bool to use as empty cells
     for (let row = 0; row < picture[col].length; row++) {
       cells[col][row] = false
     }
@@ -81,7 +87,7 @@ function strokesRequired(picture) {
   for (let col = 0; col < picture.length; col++) {
     for (let row = 0; row < picture[col].length; row++) {
       if (!cells[col][row]) {
-        check(picture, col, row, cells)
+        mapStrokes(picture, col, row, cells)
         strokes++
       }
     }
