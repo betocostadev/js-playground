@@ -4,7 +4,7 @@
   "description": "JavaScript Playground, tests, challenges, etc",
   "main": "index.js",
   "dependencies": {
-    "node-fetch": "^3.1.1"
+    "node-fetch": "^3.2.10"
   },
   "devDependencies": {
     "eslint": "^6.2.2",
