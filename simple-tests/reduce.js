@@ -10,14 +10,14 @@ console.log(sumOfSomeNumbers)
 const incomes = {
   salary: 3000,
   investment: 500,
-  sales: 1000
+  sales: 1000,
 }
 
 const expenses = {
   gym: 70,
   tim: 45,
   card: 150,
-  bus: 50
+  bus: 50,
 }
 
 const sumAll = (obj) => {

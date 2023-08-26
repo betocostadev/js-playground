@@ -3,7 +3,7 @@
         "browser": true,
         "es6": true
     },
-    "extends": "airbnb-base",
+    // "extends": "airbnb-base",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -13,7 +13,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "indent": ["error", 2],
+        // "indent": ["error", 2],
         "linebreak-style": ["error", "unix"],
         "quotes": ["warn", "single"],
         "semi": ["warn", "never"]
