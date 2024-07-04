@@ -24,3 +24,39 @@ const isPalindrome = (str) => {
 console.log(isPalindrome('a')) // true
 console.log(isPalindrome('hello')) // false
 console.log(isPalindrome('racecar')) // true
+
+// Other implementations
+
+// Worst performance
+// function isPalindrome(string) {
+//   const arr = string.split('')
+//   const copy = Array.from(arr)
+//   for (let i = 0; i < arr.length / 2; i++) {
+//     const letter = copy.pop()
+//     compare.push(letter)
+//   }
+
+//   if (arr.join('') === compare.join('')) return true
+//   else return false
+// }
+
+// Best performance
+// function isPalindrome(string) {
+// const arr = string.split('')
+// for (let i = 0; i < arr.length / 2; i++) {
+//   if (arr[i] !== arr[arr.length - 1 - i]) {
+//     return false
+//   }
+// }
+// return true
+// }
+
+const string1 = 'level'
+const string2 = 'house'
+const string3 = 'ana'
+const string4 = 'hannih'
+
+console.log(isPalindrome(string1))
+console.log(isPalindrome(string2))
+console.log(isPalindrome(string3))
+console.log(isPalindrome(string4))
