@@ -1,7 +1,7 @@
 # js-playground
 
-As the name says, it's only a JavaScript playground. Codes for experiments.
-Performance tests, learning, etc.
+As the name says, it's only a JavaScript playground. Code for experiments.
+Performance tests, learning, algorithms, and data structures, etc.
 
 ## EloquentJs
 
@@ -17,3 +17,9 @@ Recommended by the [Full Stack Open](https://fullstackopen.com/en/) Course to ha
 
 Content mostly based on Free Code Camp videos about Data Structures and Algorithms using JavaScript.
 You can find the playlist [here](https://youtube.com/playlist?list=PLWKjhJtqVAbkso-IbgiiP48n-O-JQA9PJ).
+
+## Data Structures and Algorithms (dsa-learning/fendmasters)
+
+Algorithms and Data Structures with Typescript
+Content based on Front-end Masters Course The Last Algorithms course You'll ever need.
+You can check the course [here](https://frontendmasters.com/courses/algorithms/).
