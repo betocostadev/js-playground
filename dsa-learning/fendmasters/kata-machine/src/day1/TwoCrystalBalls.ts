@@ -1,3 +1,5 @@
+// We jump to the square root of N.
+// This way, we don't go linear, but instead we go in these jumps
 export default function two_crystal_balls(breaks: boolean[]): number {
     let jumpAmount = Math.floor(Math.sqrt(breaks.length));
 

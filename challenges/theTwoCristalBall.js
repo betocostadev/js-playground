@@ -24,7 +24,7 @@ function findOptimalBreakDistance(breaks) {
   // Jump back (imagine the first ball broke, we will go back to check where it can break before this point)
   i -= jumpAmount
 
-  for (let j = 0; j < jumpAmount && i < breaks.length; j++, i++) {
+  for (let j = 0; j <= jumpAmount && i < breaks.length; j++, i++) {
     // Walk maximum a jump amount of steps
     if (breaks[i]) {
       return i
@@ -43,7 +43,11 @@ for (let i = idx; i < 10000; ++i) {
   data[i] = true
 }
 
-console.log(findOptimalBreakDistance(data))
+console.log(
+  `Optimal distance is ${idx}. Array size is: ${data.length}. Result: ${findOptimalBreakDistance(
+    data
+  )}`
+)
 console.log(
   findOptimalBreakDistance([false, false, false, false, false, true, true, true, true, true])
 )
