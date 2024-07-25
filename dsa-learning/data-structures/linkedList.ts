@@ -1,4 +1,4 @@
-// Linked List
+// Data-Structures - Linked List
 // A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations.
 // The elements in a linked list are linked using pointers.
 // In simple words, a linked list consists of nodes where each node contains a data field and a reference(link)
@@ -48,6 +48,9 @@
 // C.prev = c.next = undefined
 // Return C.val
 // The operation is 0(i) - We do the same exact number of operations don't matter the size of the list
+
+// They are so foundational to programming concepts when it comes to DSA.
+// Understanding them will help you with trees, with graphs, etc...
 
 interface LinkedList<T> {
   get length(): number
