@@ -13,10 +13,16 @@ Examples by MPJ from Fun Fun Function [Youtube channel](https://www.youtube.com/
 
 Recommended by the [Full Stack Open](https://fullstackopen.com/en/) Course to have a better understanding on how to work with React.
 
-## Data Structures and Algorithms (fcc-dsa)
+## Data Structures and Algorithms
+
+**fcc-dsa**
 
 Content mostly based on Free Code Camp videos about Data Structures and Algorithms using JavaScript.
 You can find the playlist [here](https://youtube.com/playlist?list=PLWKjhJtqVAbkso-IbgiiP48n-O-JQA9PJ).
+
+**data-structures**
+
+Content used for learning Arrays, Arrays Lists, Queues, Stacks, Ring Buffer and more. Mostly based on the teachings of the course below.
 
 ## Data Structures and Algorithms (dsa-learning/fendmasters)
 

@@ -1,29 +1,101 @@
-const a = new ArrayBuffer(6)
-console.log(a)
+const a: number[] = []
 
-const a8 = new Uint8Array(a)
-a8[0] = 45
+function time(fn: () => void): number {
+  const now = Date.now()
+  fn()
+  return Date.now() - now
+}
 
-console.log(a)
+function unshift(number: number) {
+  for (let i = 0; i < number; ++i) {
+    a.unshift(Math.random())
+  }
+}
 
-a8[2] = 45
-console.log(a)
+function shift(number: number) {
+  for (let i = 0; i < number; ++i) {
+    a.shift()
+  }
+}
 
-const a16 = new Uint16Array(a)
+function push(number: number) {
+  for (let i = 0; i < number; ++i) {
+    a.push(Math.random())
+  }
+}
 
-console.log(a)
+function pop(number: number) {
+  for (let i = 0; i < number; ++i) {
+    a.pop()
+  }
+}
 
-a16[2] = 0x4545 // 17733
+function get(idx: number) {
+  return function () {
+    return a[idx]
+  }
+}
 
-console.log(a)
+function push_arr(count: number) {
+  return function () {
+    push(count)
+  }
+}
 
-a16[2] = 0x45 // 69
+function pop_arr(count: number) {
+  return function () {
+    pop(count)
+  }
+}
 
-console.log(a)
+function unshift_arr(count: number) {
+  return function () {
+    unshift(count)
+  }
+}
 
-// Tecnically since we can increase the size of an array in Javascript (and this means their indexes are all changed)
-// it's not actually an array.
-// An array must have a size.
-// So const = [] is not actually an array data structure.
-// Bad things about an array:
-// There is no Deletion, Insertion, and it cannot grow.
+function shift_arr(count: number) {
+  return function () {
+    shift(count)
+  }
+}
+
+const tests = [10, 100, 1000, 10000, 100000, 1_000_000, 10_000_000]
+console.log('Testing get')
+tests.forEach((t) => {
+  a.length = 0
+  push(t)
+  console.log(t, time(get(t - 1)))
+})
+
+console.log('push')
+tests.forEach((t) => {
+  a.length = 0
+  push(t)
+
+  console.log(t, time(push_arr(1000)))
+})
+
+console.log('pop')
+tests.forEach((t) => {
+  a.length = 0
+  push(t)
+
+  console.log(t, time(pop_arr(1000)))
+})
+
+console.log('unshift')
+tests.forEach((t) => {
+  a.length = 0
+  push(t)
+
+  console.log(t, time(unshift_arr(1000)))
+})
+
+console.log('shift')
+tests.forEach((t) => {
+  a.length = 0
+  push(t)
+
+  console.log(t, time(shift_arr(1000)))
+})
