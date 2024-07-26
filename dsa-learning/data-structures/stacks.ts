@@ -1,6 +1,8 @@
 // Data-Structures - Stacks
 // Basically a Stack is a specific implementation of a Linked List
 
+import { NodeStack } from './types'
+
 // A stack is a linear data structure that follows the Last In First Out (LIFO) principle.
 // A good example of a stack is any stack of plates where the plate that is placed last is the first
 // to be removed.
@@ -32,7 +34,19 @@
 // Basic operations
 // push, pop, peek
 
-type Node<T> = {
-  value: T
-  prev?: Node<T>
+export default class Stack<T> {
+  public length: number
+  private head?: NodeStack<T>
+
+  constructor() {}
+
+  push(item: T): void {
+    const node = { value: item } as NodeStack<T>
+  }
+  pop(): T | undefined {
+    return undefined
+  }
+  peek(): T | undefined {
+    return undefined
+  }
 }

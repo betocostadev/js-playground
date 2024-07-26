@@ -6,6 +6,8 @@
 // The difference between stacks and queues is in removing. In a stack we remove the item the most
 // recently added; in a queue, we remove the item the least recently added.
 
+import { Node } from './types'
+
 // A -> B -> C -> D
 // ˆ              ˆ
 // |              |
@@ -50,11 +52,6 @@
 // enqueue, dequeue, peek
 // Pay attention that in a QUEUE we DON'T CARE about all the data.
 // We just need to know who is the Head, Tail, Enqueue, and Dequeue.
-
-type Node<T> = {
-  value: T
-  next?: Node<T>
-}
 
 export default class Queue<T> {
   public length: number
