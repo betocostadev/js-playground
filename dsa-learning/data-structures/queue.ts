@@ -48,6 +48,8 @@
 
 // Algorithms
 // enqueue, dequeue, peek
+// Pay attention that in a QUEUE we DON'T CARE about all the data.
+// We just need to know who is the Head, Tail, Enqueue, and Dequeue.
 
 type Node<T> = {
   value: T
@@ -60,6 +62,7 @@ export default class Queue<T> {
   constructor() {}
 
   enqueue(item: T): void {
+    const node = { value: item } as Node<T>
     return
   }
   deque(): T | undefined {
