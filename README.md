@@ -15,16 +15,20 @@ Recommended by the [Full Stack Open](https://fullstackopen.com/en/) Course to ha
 
 ## Data Structures and Algorithms
 
-**fcc-dsa**
+### fcc-dsa
 
 Content mostly based on Free Code Camp videos about Data Structures and Algorithms using JavaScript.
 You can find the playlist [here](https://youtube.com/playlist?list=PLWKjhJtqVAbkso-IbgiiP48n-O-JQA9PJ).
 
-**data-structures**
+### dsa-learning/data-structures
 
 Content used for learning Arrays, Arrays Lists, Queues, Stacks, Ring Buffer and more. Mostly based on the teachings of the course below.
 
-## Data Structures and Algorithms (dsa-learning/fendmasters)
+### dsa-learning/algorithms
+
+Content based on problem solving with algorithms, the most known algorithms. Recursion, and more...
+
+### dsa-learning/fendmasters/kata-machine (dsa-learning/fendmasters)
 
 Algorithms and Data Structures with Typescript
 Content based on Front-end Masters Course The Last Algorithms course You'll ever need.
