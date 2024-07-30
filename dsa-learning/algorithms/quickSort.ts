@@ -11,4 +11,10 @@
 // to the left (or low), and move all the higher numbers that the pivot to the right.
 // Then we do the some of the first two halves and keep doing it until all arrays are [] or [n].
 
+function qs(arr: number[], low: number, high: number): void {}
+
+function partition(arr: number[], low: number, high: number): number {
+  return -1
+}
+
 export default function quick_sort(arr: number[]): void {}

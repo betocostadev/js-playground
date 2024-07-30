@@ -7,8 +7,6 @@ function qs(arr: number[], low: number, high: number): void {
 
     qs(arr, low, pivotIdx - 1);
     qs(arr, pivotIdx + 1, high);
-
-    console.log("Solved Arr: ", arr);
 }
 
 function partition(arr: number[], low: number, high: number): number {
@@ -35,6 +33,8 @@ function partition(arr: number[], low: number, high: number): number {
 }
 
 export default function quick_sort(arr: number[]): void {
+    // const result = qs(arr, 0, arr.length - 1);
+    // console.log("Solved Arr: ", arr);
     qs(arr, 0, arr.length - 1);
 }
 
@@ -44,7 +44,7 @@ const thing = [
 
 const testArr = [9, 3, 7, 4, 69, 420, 42];
 
-// console.log(quick_sort(testArr));
+console.log(quick_sort(testArr));
 console.log(quick_sort(thing));
 
 // quick_sort(thing);
