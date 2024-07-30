@@ -30,7 +30,7 @@ test("maze solver", function () {
 
     // there is only one path through
     const result = maze_solver(maze, "x", { x: 10, y: 0 }, { x: 1, y: 5 });
-    console.log(result);
+    // console.log(result);
     expect(drawPath(maze, result)).toEqual(drawPath(maze, mazeResult));
 });
 
@@ -41,6 +41,5 @@ function drawPath(data: string[], path: Point[]) {
             data2[p.y][p.x] = "*";
         }
     });
-    console.log(data2.map((d) => d.join("")));
     return data2.map((d) => d.join(""));
 }

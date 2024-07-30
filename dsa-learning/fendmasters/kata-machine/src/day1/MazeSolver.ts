@@ -14,6 +14,12 @@ function walk(
     path: Point[],
 ): boolean {
     // Base case
+    // console.log("Maze: ", maze);
+    // console.log("Wall: ", wall);
+    // console.log("Curr: ", curr);
+    // console.log("End: ", end);
+    // console.log("Seen: ", seen);
+    // console.log("Path: ", path);
 
     // Off the map
     if (
