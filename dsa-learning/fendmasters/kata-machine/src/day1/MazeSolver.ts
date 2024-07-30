@@ -79,19 +79,3 @@ export default function solve(
 
     return path;
 }
-
-[
-    -"xxxxxxxxxx*x",
-    -"x        x*x",
-    -"x        x*x",
-    -"x xxxxxxxx*x",
-    -"x**********x",
-    -"x*xxxxxxxxxx",
-
-    +"xxxxxxxxxx x",
-    +"x        x x",
-    +"x        x x",
-    +"x xxxxxxxx x",
-    +"x          x",
-    +"x xxxxxxxxxx",
-];
