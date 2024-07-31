@@ -11,19 +11,13 @@
 // to the left (or low), and move all the higher numbers that the pivot to the right.
 // Then we do the some of the first two halves and keep doing it until all arrays are [] or [n].
 
-// This one is the optimized version, we use the middle of the array to be the pivot!
-function qs(arr: number[], low: number, high: number): void {
-  if (low >= high) {
-    return
-  }
-}
+// Try to solve the first one using the last index of the Array as the pivot
+// After solving it, try using the middle of the array
+
+function qs(arr: number[], low: number, high: number): void {}
 
 function partition(arr: number[], low: number, high: number): number {
   return -1
 }
 
-const test_arr = [8, 7, 4, 5, 11, 3, 9]
-
-export default function quick_sort(arr: number[]): void {
-  qs(arr, 0, arr.length)
-}
+export default function quick_sort(arr: number[]): void {}
