@@ -11,6 +11,7 @@
 // to the left (or low), and move all the higher numbers that the pivot to the right.
 // Then we do the some of the first two halves and keep doing it until all arrays are [] or [n].
 
+// Mid Index Pivot
 // This one is uses one of the optimized versions of Quick Sort.
 // We use the middle of the Array as the Pivot
 function qs(arr: number[], low: number, high: number): void {
