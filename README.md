@@ -33,3 +33,7 @@ Content based on problem solving with algorithms, the most known algorithms. Rec
 Algorithms and Data Structures with Typescript
 Content based on Front-end Masters Course The Last Algorithms course You'll ever need.
 You can check the course [here](https://frontendmasters.com/courses/algorithms/).
+
+## micro-apps
+
+Simple applications using different frameworks like Vue, and React.
