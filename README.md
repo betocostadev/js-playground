@@ -13,6 +13,10 @@ Examples by MPJ from Fun Fun Function [Youtube channel](https://www.youtube.com/
 
 Recommended by the [Full Stack Open](https://fullstackopen.com/en/) Course to have a better understanding on how to work with React.
 
+## Challenges
+
+Some of the challenges are challenges based on Technical interviews. Mostly using arrays, algorithms, and data structures.
+
 ## Data Structures and Algorithms
 
 ### fcc-dsa
