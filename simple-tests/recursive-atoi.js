@@ -6,33 +6,32 @@
 // Input recursiveAtoi("19860401")
 // Output 19860401
 
-// Input recursiveAtoi("a01986cc0401")
-// Output 019860401
+// Input recursiveAtoi("a401986cc0401")
+// Output 4019860401
 
 // Base case
 // count === 0 / return 0, or no more text
 
-const recursiveAtoi = (text, count, result) => {
-  if (!count) count = text.length
-  let chars = [...text]
-  let char = chars[count - 1]
-  const newText = text.substring(0, text.length - 1)
-  const newCount = newText.length
+const recursiveAtoi = (source, target) => {
+  const size = source.length
+  let chars = [...source]
+  let char = chars[size - 1]
+  const newText = source.substring(0, size - 1)
   if (!isNaN(char)) {
     const int = parseInt(char)
-    if (!result) {
-      result = [int]
+    if (!target) {
+      target = [int]
     } else {
-      result.unshift(int)
+      target.unshift(int)
     }
   }
 
   if (newText === '') {
-    return result
+    return target.reduce((acc, num) => acc * 10 + num, 0)
   }
-  return recursiveAtoi(newText, newCount, result)
+  return recursiveAtoi(newText, target)
 }
 
 console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('19860401'))
-console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('09860401'))
-console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('09ax86p330401'))
+console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('509860401'))
+console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('1109ax86p330401'))
