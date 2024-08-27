@@ -11,6 +11,8 @@
 
 // Base case
 // count === 0 / return 0, or no more text
+// Or, we can avoid using count and pass the string every time without the last character
+// In the end the base case will be an "empty string"
 
 const recursiveAtoi = (source, target) => {
   const size = source.length
