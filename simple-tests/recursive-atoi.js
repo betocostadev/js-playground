@@ -16,11 +16,11 @@
 
 const recursiveAtoi = (source, target) => {
   const size = source.length
-  let chars = [...source]
-  let char = chars[size - 1]
+  const sourceArr = [...source]
+  const charToConvert = sourceArr[size - 1]
   const newText = source.substring(0, size - 1)
-  if (!isNaN(char)) {
-    const int = parseInt(char)
+  if (!isNaN(charToConvert)) {
+    const int = parseInt(charToConvert)
     if (!target) {
       target = [int]
     } else {
@@ -37,3 +37,4 @@ const recursiveAtoi = (source, target) => {
 console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('19860401'))
 console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('509860401'))
 console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('1109ax86p330401'))
+console.log('The result of the Rercusvie Atoi is: ', recursiveAtoi('7b95093a2x46'))
