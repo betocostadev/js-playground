@@ -1,5 +1,6 @@
 // S.O.L.I.D. Principles
 // 1 - S: Single Responsibility Principle
+// A class, entity, component, or function should have ONLY ONE responsibility.
 
 // BAD IMPLEMENTATION
 class CarPedals {
