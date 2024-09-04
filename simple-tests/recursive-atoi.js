@@ -31,6 +31,7 @@ const recursiveAtoi = (source, target) => {
   if (newText === '') {
     return target.reduce((acc, num) => acc * 10 + num, 0)
   }
+
   return recursiveAtoi(newText, target)
 }
 
