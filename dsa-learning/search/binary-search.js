@@ -30,7 +30,7 @@ function bsList(haystack, needle) {
 console.log(bsList([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 3)); // true
 console.log(bsList([1, 2, 3, 4, 5, 6, 7, 8, 8, 10, 11, 12, 13, 14, 15, 16], 9)); // false
 var thousandArr = [];
-for (var i = 0; i < 1000; i++) {
+for (var i = 0; i < 4096; i++) {
     thousandArr.push(i);
 }
-console.log(bsList(thousandArr, 750)); // true
+console.log(bsList(thousandArr, 1753)); // true
