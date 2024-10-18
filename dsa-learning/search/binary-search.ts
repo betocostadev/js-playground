@@ -8,9 +8,9 @@ function bsList(haystack: number[], needle: number): boolean {
   let divisions = 0 // Just for logging purposes
 
   let low = 0
-  let high = haystack.length - 1
+  let high = haystack.length
 
-  while (low <= high) {
+  while (low < high) {
     let mid = Math.floor((low + high) / 2)
     let half = haystack[mid]
 

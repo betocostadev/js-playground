@@ -7,8 +7,8 @@
 function bsList(haystack, needle) {
     var divisions = 0; // Just for logging purposes
     var low = 0;
-    var high = haystack.length - 1;
-    while (low <= high) {
+    var high = haystack.length;
+    while (low < high) {
         var mid = Math.floor((low + high) / 2);
         var half = haystack[mid];
         if (half === needle) {
