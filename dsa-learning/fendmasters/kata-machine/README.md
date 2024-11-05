@@ -2,7 +2,9 @@
 
 Code in this folder comes originally from The Primeagen, it's from his [kata-machine repository](https://github.com/ThePrimeagen/kata-machine).
 
-Some files may be different since they were used by my as I was coding along.
+Some files may be different since they were used by me as I was coding along.
+
+It's possible to simply reset the code (start another day folder). More information below.
 
 **Tip** use `npx jest file-name` to run the test of the file.
 
