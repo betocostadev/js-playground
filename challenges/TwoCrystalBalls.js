@@ -13,8 +13,8 @@
 // O(Vn + vN)
 
 // V25 = 5..
-// If the breaking point was 16, we would jump to 5, 10, 15, 20. At 20 the first ball breaks.
-// We go back to 15 and will go linearly but only from 15 to 20 in this case
+// If the breaking point is 17, we would jump to 5, 10, 15, 20. At 20 the first ball breaks.
+// We go back to 15 and will go linearly but only from 15 to 20 in this case.
 function findOptimalBreakDistance(breaks) {
   // We jump the square root of any forward every time, until it breaks, then we can go back
   const jumpAmount = Math.floor(Math.sqrt(breaks.length))
@@ -54,3 +54,34 @@ console.log(
   findOptimalBreakDistance([false, false, false, false, false, true, true, true, true, true])
 )
 console.log(findOptimalBreakDistance([false, false, false, false, false, false]))
+
+// Test - Breaks at 16, with 25 "floors"
+console.log(
+  findOptimalBreakDistance([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+  ])
+)
