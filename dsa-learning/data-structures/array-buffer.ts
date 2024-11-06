@@ -23,7 +23,8 @@ console.log(a)
 
 // Tecnically since we can increase the size of an array in Javascript (and this means their indexes are all changed)
 // it's not actually an array.
-// An array must have a size.
+// An array must have a size!
+
 // So const = [] is not actually an array data structure.
 // Bad things about an array:
 // There is no Deletion, Insertion, and it cannot grow.

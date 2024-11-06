@@ -1,4 +1,5 @@
 // Data-Structures - Queue
+
 // Basically a Queue is a specific implementation of a Linked List
 // A queue is a linear data structure that follows the First In First Out (FIFO) principle.
 // A good example of a queue is any queue of consumers for a resource where the consumer that

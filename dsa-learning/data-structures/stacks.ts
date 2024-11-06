@@ -1,4 +1,5 @@
 // Data-Structures - Stacks
+
 // Basically a Stack is a specific implementation of a Linked List
 
 import { NodeStack } from './types'

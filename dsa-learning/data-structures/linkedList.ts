@@ -1,12 +1,15 @@
 // Data-Structures - Linked List
+
 // A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations.
 // The elements in a linked list are linked using pointers.
 // In simple words, a linked list consists of nodes where each node contains a data field and a reference(link)
 // to the next node in the list.
+
 // Types of Linked List
 // Singly Linked List − Item navigation is forward only.
 // Doubly Linked List − Items can be navigated forward and backward.
 
+// Linked List elements:
 // Head = Fist element
 // Items are containers
 
@@ -18,6 +21,8 @@
 // Get head / tail
 // Get N
 
+// Linked Lists are considered "node" based data-structures.
+
 // Singly Linked List
 // Node<T> | val: T | next?: Node<T>
 // Example: head: {value: 20, next: B} -> B:  {value: 25, next: C} -> C:{value: 30, next: undefined} -> undefined
@@ -26,7 +31,7 @@
 // Node<T> | val: T | next?: Node<T> | prev?: Node<T>
 // Example: head: {value: 20, next: B, prev: undefined} -> B: {value: 25, next: C, prev: head} -> C: {value: 30, next: tail, prev: B} -> tail: {value: 35, next: undefined, prev: C} -> undefined
 
-// Inserting a Node
+// === Inserting a Node ===
 // Now let's think about inserting data to the doubly linked list above.
 // We will insert F after the head (A), so it will be changed to A-F-B.
 // Start head: {value: 20, next: B, prev: undefined} -> B: {value: 25, next: C, prev: head} -> C: {value: 30, next: undefined, prev: B} -> undefined
@@ -35,9 +40,9 @@
 
 // Notice that we had to change the next for A, and the prev for B, now F is in the middle of these two
 // And the list has grown by one node.
-// The operation is 0(i) - We do the same exact number of operations don't matter the size of the list
+// The operation is O(1) - We do the same exact number of operations regardless the size of the list
 
-// Deleting a Node
+// === Deleting a Node ===
 // Think about: A -> B -> C -> D
 // We will remove C
 // The operation needs to be in the correct order, so:
@@ -46,8 +51,9 @@
 // B.next = C.next
 // D.prev = C.prev
 // C.prev = c.next = undefined
-// Return C.val
-// The operation is 0(i) - We do the same exact number of operations don't matter the size of the list
+// return C.val
+// Remember that the ORDER OF OPERATIONS is extremely important.
+// The operation is O(1) - We do the same exact number of operations don't matter the size of the list
 
 // They are so foundational to programming concepts when it comes to DSA.
 // Understanding them will help you with trees, with graphs, etc...
@@ -61,3 +67,7 @@ interface LinkedList<T> {
   prepend(item: T): void
   get(index: number): T | undefined
 }
+
+// Can also have other methods like:
+// get head
+// get tail
