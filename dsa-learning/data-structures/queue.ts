@@ -2,10 +2,10 @@
 
 // Basically a Queue is a specific implementation of a Linked List
 // A queue is a linear data structure that follows the First In First Out (FIFO) principle.
-// A good example of a queue is any queue of consumers for a resource where the consumer that
+// A good example of a queue is any queue (or line) of consumers for a resource where the consumer that
 // came first is served first.
-// The difference between stacks and queues is in removing. In a stack we remove the item the most
-// recently added; in a queue, we remove the item the least recently added.
+// The difference between stacks and queues is in removing. In a stack we remove the item that was
+// recently added; In a queue, we remove the item the least recently added.
 
 import { Node } from './types'
 
@@ -52,7 +52,7 @@ import { Node } from './types'
 // Algorithms
 // enqueue, dequeue, peek
 // Pay attention that in a QUEUE we DON'T CARE about all the data.
-// We just need to know who is the Head, Tail, Enqueue, and Dequeue.
+// We just need to know who is the Head, Tail, and we need to Enqueue, and Dequeue.
 
 export default class Queue<T> {
   public length: number
@@ -63,7 +63,7 @@ export default class Queue<T> {
     const node = { value: item } as Node<T>
     return
   }
-  deque(): T | undefined {
+  dequeue(): T | undefined {
     return undefined
   }
   peek(): T | undefined {
