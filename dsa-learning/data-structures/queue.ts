@@ -63,9 +63,11 @@ export default class Queue<T> {
     const node = { value: item } as Node<T>
     return
   }
-  dequeue(): T | undefined {
+
+  deque(): T | undefined {
     return undefined
   }
+
   peek(): T | undefined {
     return undefined
   }
