@@ -16,22 +16,21 @@ var Stack = /** @class */ (function () {
             this.head = node;
         }
         else {
-            var head = this.head;
+            node.prev = this.head;
             this.head = node;
-            this.head.prev = head;
         }
     };
     Stack.prototype.pop = function () {
-        if (!this.head) {
-            return undefined;
-        }
-        this.length--;
-        console.log(this.head);
-        var head = this.head;
-        this.head = this.head.prev;
-        // Cleanup
-        if (this.length === 0)
+        this.length = Math.max(0, this.length - 1);
+        if (this.length === 0) {
+            var head_1 = this.head;
+            // Cleanup
             this.head = undefined;
+            return head_1 === null || head_1 === void 0 ? void 0 : head_1.value;
+        }
+        var head = this.head;
+        this.head = head.prev;
+        // If you had to manage memory, you would need to clean up the head
         return head.value;
     };
     Stack.prototype.peek = function () {
@@ -42,6 +41,9 @@ var Stack = /** @class */ (function () {
 }());
 exports.default = Stack;
 var library = new Stack();
+library.push('The Hobbit');
+console.log('Stack head is: ', library.peek());
+console.log('Library size is: ', library.length);
 library.push('Lord of the Rings I');
 console.log('Stack head is: ', library.peek());
 console.log('Library size is: ', library.length);
@@ -57,6 +59,10 @@ console.log('Stack head is: ', library.peek());
 console.log('Removing book: ', library.pop());
 console.log('Library size is: ', library.length);
 console.log('Stack head is: ', library.peek());
+console.log('Removing book: ', library.pop());
+console.log('Library size is: ', library.length);
+console.log('Stack head is: ', library.peek());
+console.log('Library size is: ', library.length);
 console.log('Removing book: ', library.pop());
 console.log('Library size is: ', library.length);
 console.log('Stack head is: ', library.peek());

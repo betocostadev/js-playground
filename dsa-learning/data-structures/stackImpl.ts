@@ -22,23 +22,24 @@ export default class Stack<T> {
     if (!this.head) {
       this.head = node
     } else {
-      const head = this.head
+      node.prev = this.head
       this.head = node
-      this.head.prev = head
     }
   }
 
   pop(): T | undefined {
-    if (!this.head) {
-      return undefined
+    this.length = Math.max(0, this.length - 1)
+    if (this.length === 0) {
+      const head = this.head
+      // Cleanup
+      this.head = undefined
+      return head?.value
     }
-    this.length--
-    console.log(this.head)
 
-    const head = this.head
-    this.head = this.head.prev
-    // Cleanup
-    if (this.length === 0) this.head = undefined
+    const head = this.head as NodeStack<T>
+    this.head = head.prev
+
+    // If you had to manage memory, you would need to clean up the head
 
     return head.value
   }
@@ -49,6 +50,9 @@ export default class Stack<T> {
 }
 
 const library = new Stack()
+library.push('The Hobbit')
+console.log('Stack head is: ', library.peek())
+console.log('Library size is: ', library.length)
 library.push('Lord of the Rings I')
 console.log('Stack head is: ', library.peek())
 console.log('Library size is: ', library.length)
@@ -64,6 +68,10 @@ console.log('Stack head is: ', library.peek())
 console.log('Removing book: ', library.pop())
 console.log('Library size is: ', library.length)
 console.log('Stack head is: ', library.peek())
+console.log('Removing book: ', library.pop())
+console.log('Library size is: ', library.length)
+console.log('Stack head is: ', library.peek())
+console.log('Library size is: ', library.length)
 console.log('Removing book: ', library.pop())
 console.log('Library size is: ', library.length)
 console.log('Stack head is: ', library.peek())
