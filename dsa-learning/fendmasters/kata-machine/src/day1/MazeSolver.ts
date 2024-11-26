@@ -13,7 +13,7 @@ function walk(
     seen: boolean[][],
     path: Point[],
 ): boolean {
-    // Base case
+    // 1 - Base case
     // console.log("Maze: ", maze);
     // console.log("Wall: ", wall);
     // console.log("Curr: ", curr);

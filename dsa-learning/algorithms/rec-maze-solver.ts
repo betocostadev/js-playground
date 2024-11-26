@@ -40,6 +40,11 @@
 // 3 - Reached goal
 // 4 - If it was there before
 
+type Point = {
+  x: number
+  y: number
+}
+
 function walk(
   maze: string[],
   wall: string,
@@ -57,5 +62,8 @@ function walk(
   // pre
   // recurse
   // post
+  return false
 }
-export default function solve(maze: string[], wall: string, start: Point, end: Point): Point[] {}
+export default function solve(maze: string[], wall: string, start: Point, end: Point): Point[] {
+  return []
+}
