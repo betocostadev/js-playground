@@ -1,15 +1,14 @@
 // The most basic way of searching
 // Not the most performant one O(n)
 
-// This linear search will work as indexOf - It will return the position of the item
-// if the item is in the array
-const linearSearch = (needle: number, haystack: number[]): number => {
+// only checks if the item is in the array
+const linearSearch = (needle: number, haystack: number[]): boolean => {
   for (let i = 0; i < haystack.length; i++) {
     if (needle === haystack[i]) {
-      return i
+      return true
     }
   }
-  return -1
+  return false
 }
 
 console.log('===== Linear Search =====')

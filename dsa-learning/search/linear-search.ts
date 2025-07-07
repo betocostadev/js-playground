@@ -5,7 +5,7 @@
 // but it is implemented in the language itself, so it is more efficient
 // than the linear search algorithm implemented here.
 
-function linearSearch(array: number[], target: number): number {
+function linear_Search(array: number[], target: number): number {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === target) {
       return i
@@ -14,4 +14,4 @@ function linearSearch(array: number[], target: number): number {
   return -1
 }
 
-console.log(linearSearch([1, 2, 3, 3, 4], 3)) //2
+console.log(linear_Search([1, 2, 3, 3, 4], 3)) //2
