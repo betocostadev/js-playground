@@ -10,7 +10,7 @@ export class ApiClient {
     }
   }
 
-  async get(url: string) {
+  async get<T>(url: string): Promise<T> {
     const response = await fetch(`${this.BASE_URL}/${url}`, {
       headers: this.headers,
     })
