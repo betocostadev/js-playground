@@ -1,7 +1,8 @@
 // Filter, like map, returns a new array instead of modifying the original array.
 // MDN FILTER: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
-console.log(`====== Array Filter: ======`)
+console.log('====== Array Filter: ======')
+
 const animals = [
   { id: 'mammals', species: 'dog', name: 'Meg' },
   { id: 'mammals', species: 'dog', name: 'Brocolis' },
@@ -9,13 +10,13 @@ const animals = [
   { id: 'mammals', species: 'dog', name: 'Dingo' },
   { id: 'mammals', species: 'cat', name: 'Pipo' },
   { id: 'mammals', species: 'fish', name: 'Cuco' },
-  { id: 'mammals', species: 'dog', name: 'Maya' }
- ]
+  { id: 'mammals', species: 'dog', name: 'Maya' },
+]
 
-const theDogs = animals.filter(animal => animal.species === 'dog')
+const theDogs = animals.filter((animal) => animal.species === 'dog')
 console.log('The dogs are:', theDogs)
 
-const theCats = animals.filter(animal => animal.species === 'cat')
+const theCats = animals.filter((animal) => animal.species === 'cat')
 console.log('The cats are:', theCats)
 
 console.log(`
@@ -34,7 +35,7 @@ const persons = [
   { name: 'Carol', age: 27 },
 ]
 
-const nameAndAge = persons.map(person => `${person.name} is ${person.age} years old`)
+const nameAndAge = persons.map((person) => `${person.name} is ${person.age} years old`)
 console.log('Names and ages: ', nameAndAge)
 
 // Mixing both
@@ -43,7 +44,7 @@ console.log(`
 `)
 
 const onlyAbove18 = persons
-  .filter(person => person.age > 18)
-  .map(person => `${person.name} is ${person.age} years old. Can have a license.`)
+  .filter((person) => person.age > 18)
+  .map((person) => `${person.name} is ${person.age} years old. Can have a license.`)
 
-console.log(`Above 18 years old: `, onlyAbove18)
+console.log(`Above 18 years old: , ${onlyAbove18}`)
