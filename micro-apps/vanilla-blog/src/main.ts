@@ -1,36 +1,26 @@
 import './style.css'
-import { setupCounter } from './counter.ts'
-import { UsersService } from './services/users.ts'
-
-const usersService = new UsersService()
-
-async function loadUsers() {
-  try {
-    const users = await usersService.getUsers()
-
-    console.log(users)
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-loadUsers()
+// import { setupCounter } from './counter.ts'
+import { fetchPosts } from './posts'
+import { fetchUsers } from './users.ts'
+import { createUserPostCardContainer } from './components/UserPostCardContainer.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div>
-    <h1>The Vanilla Blog</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-</section>
-
-<section id="next-steps">
-  <div id="docs">
+<main id=center>
+  <section>
+    <div>
+      <h1 class="title">The Vanilla Blog</h1>
     </div>
-</section>
+  </section>
 
-<div class="ticks"></div>
-<section id="spacer"></section>
+  <article id="users">
+    <div id="users-container">
+    </div>
+  </article>
+</main>
 `
+const [users, posts] = await Promise.all([fetchUsers(), fetchPosts()])
+createUserPostCardContainer({ users, posts })
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// usersContainer?.appendChild(userCardContainer)
+// console.log(container)
+// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)

@@ -8,7 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "micro-apps/posts-vanilla/dist",
     "rootDir": "./",
     "moduleResolution": "node"
   },
@@ -21,6 +21,6 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "micro-apps/posts-vanilla/dist"
   ]
 }

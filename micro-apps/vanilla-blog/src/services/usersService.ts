@@ -6,3 +6,6 @@ export class UsersService extends ApiClient {
     return this.get<User[]>('users')
   }
 }
+
+const usersService = new UsersService()
+export default usersService

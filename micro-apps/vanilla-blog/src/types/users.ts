@@ -1,3 +1,5 @@
+import type { Post } from './posts'
+
 export interface User {
   id: number
   name: string
@@ -7,6 +9,10 @@ export interface User {
   phone: string
   website: string
   company: Company
+}
+
+export interface UserWithPosts extends User {
+  posts: Post[]
 }
 
 interface Company {
