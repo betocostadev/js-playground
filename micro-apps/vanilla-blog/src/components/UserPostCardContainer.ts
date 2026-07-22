@@ -1,7 +1,7 @@
 import type { User, UserWithPosts } from '../types/users'
 import type { Post } from '../types/posts'
 import { createUserCard } from './UserCard'
-import { createUserWithPosts } from '../utils/common'
+import { createUserWithPosts } from '../features/users/mergedUserPosts'
 
 const fragment = document.createDocumentFragment()
 

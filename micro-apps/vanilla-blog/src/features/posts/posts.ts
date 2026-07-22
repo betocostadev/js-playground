@@ -1,4 +1,4 @@
-import postsService from './services/postsService'
+import postsService from '../../services/postsService'
 
 export async function fetchPosts() {
   try {
